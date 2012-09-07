@@ -1,0 +1,57 @@
+
+\usepackage[cm]{fullpage}
+
+% Включаем русский язык
+\usepackage{latexsym}
+\usepackage[warn]{mathtext}     % русские буквы буквы в формулах (с предупреждением)
+\usepackage[english,russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage{indentfirst}        % русский стиль: отступ первого абзаца раздела
+
+% Подключаем графику
+\usepackage[pdftex]{graphicx}
+\pdfcompresslevel=9
+\graphicspath{{images/}}
+
+% Подключаем математические формулы
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{cmap}               % Поиск по русским буквам в pdf
+
+\usepackage{hyperref}
+
+\usepackage[usenames]{color}
+
+\usepackage{cite}
+
+\usepackage{listings,fancyvrb}
+\lstset{%
+  language=C++,
+  basicstyle=\small\ttfamily,
+  commentstyle=\color[rgb]{0,0.5,0},
+  keywordstyle=\color[rgb]{0,0,1},
+  stringstyle=\color[rgb]{0.7,0.1,0.1},
+  columns=fullflexible,
+  frame=single,
+  escapechar=\%,
+  extendedchars=\false,
+  mathescape=\true
+}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\renewcommand{\ref}[1]{\hyperef[#1]{\ref*{#1}}}
+
+\newcommand{\labtitle}[2]{%
+  \begin{center}
+    \huge{\textbf{Лабораторная работа №#1 по курсу <<Проектирование
+        программ в интеллектуальных системах>> (2 курс #2 семестр)}}
+  \end{center}
+  \HRule
+}
+
+\newcommand{\labtheme}[1]{\textbf{Тема}: #1}
+\newcommand{\labgoal}[1]{\textbf{Цель}: #1}
