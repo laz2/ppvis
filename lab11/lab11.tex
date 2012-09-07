@@ -1,52 +1,15 @@
 
 \documentclass[a4paper,12pt]{article}
 
-\usepackage[cm]{fullpage}
-
-% Включаем русский язык
-\usepackage{latexsym}
-\usepackage[warn]{mathtext}     % русские буквы буквы в формулах (с предупреждением)
-\usepackage[english,russian]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T2A]{fontenc}
-\usepackage{indentfirst}        % русский стиль: отступ первого абзаца раздела
-
-% Подключаем графику
-\usepackage[pdftex]{graphicx}
-\pdfcompresslevel=9
-\graphicspath{{images/}}
-
-% Подключаем математические формулы
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-
-\usepackage{cmap}               % Поиск по русским буквам в pdf
-
-\usepackage{hyperref}
-
-\usepackage[usenames]{color}
-
-\usepackage{cite}
-
-\usepackage{listings,fancyvrb}
-\lstset{language=C++,
-  basicstyle=\small\ttfamily,
-  commentstyle=\color[rgb]{0,0.5,0},
-  keywordstyle=\color[rgb]{0,0,1},
-  stringstyle=\color[rgb]{0.7,0.1,0.1},
-  columns=fullflexible,
-  frame=single,
-  escapechar=\%,
-  extendedchars=\false,
-  mathescape=\true
-}
-
-\renewcommand{\ref}[1]{\hyperef[#1]{\ref*{#1}}}
+\usepackage{listings}
+\usepackage{../lab}
 
 \begin{document}
 
+\labtitle{1}{1}
 
+\labtheme{Изучение основ объектно-ориентированного программирования на
+  языке программирования С++}
 
 Содержание:
 \begin{itemize}
@@ -85,7 +48,7 @@
   \end{itemize}
 \end{itemize}
 
-\section{Заданий}
+\section{Задание}
 \label{sec:Task}
 
 Реализовать на языке \verb|С++| один из нижеперечисленных вариантов и
@@ -97,6 +60,8 @@ unit-тестов. В случае написания unit-тестов необ
 Каждый из реализованных классов должен иметь следующие свойства:
 
 \begin{itemize}
+\item инкапсуляция;
+\item отделение пользовательского интерфейса от реализации класса;
 \item конструктор копирования и оператор \lstinline|=|, если это
   уместно;
 \item деструктор, если это необходимо;
